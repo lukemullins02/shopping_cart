@@ -9,7 +9,7 @@ export default function Shop() {
           <NavLink to="/shop">Shop</NavLink>
         </li>
         <li>
-          <NavLink to="/cart">Shop</NavLink>
+          <NavLink to="/cart">Cart</NavLink>
         </li>
       </ul>
     </nav>
