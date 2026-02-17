@@ -1,3 +1,7 @@
-export default function Cart() {
-  return <h1>Cart</h1>;
+import Card from "./Card";
+
+export default function Cart({ cart }) {
+  console.log(cart);
+
+  return <Card product={cart} />;
 }

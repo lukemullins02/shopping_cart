@@ -4,11 +4,13 @@ import Shop from "./components/Shop";
 import Cart from "./components/Cart";
 import { Routes, Route } from "react-router";
 import { useState, useEffect } from "react";
+import "./app.css";
 
 function App() {
   const [product, setProduct] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,8 +37,11 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/shop" element={<Shop product={product} />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route
+            path="/shop"
+            element={<Shop product={product} setCart={setCart} cart={cart} />}
+          />
+          <Route path="/cart" element={<Cart cart={cart} />} />
         </Routes>
       </div>
     </>
