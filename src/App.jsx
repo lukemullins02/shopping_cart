@@ -7,25 +7,35 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [product, setProduct] = useState([]);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetch("https://fakestoreapi.com/products").then(
-        (response) => response.json(),
-      );
-
-      setProduct(...data);
+      fetch("https://fakestoreapi.com/products")
+        .then((response) => {
+          if (response.status >= 400) {
+            throw new Error("server error");
+          }
+          return response.json();
+        })
+        .then((response) => setProduct(response))
+        .catch((error) => setError(error))
+        .finally(() => setLoading(false));
     };
     fetchData();
   }, []);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>A network error was encountered</p>;
 
   return (
     <>
       <Navbar />
       <div>
         <Routes>
-          <Route path="/" element={<Home product={product} />} />
-          <Route path="/shop" element={<Shop />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop product={product} />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>
       </div>

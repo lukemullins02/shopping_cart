@@ -1,3 +1,7 @@
+import Card from "./Card";
+
 export default function Shop({ product }) {
-  return <h1>Shop</h1>;
+  console.log(product);
+
+  return <Card product={product} />;
 }
