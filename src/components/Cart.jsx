@@ -1,7 +1,5 @@
-import Card from "./Card";
+import CartCard from "./CartCard";
 
 export default function Cart({ cart }) {
-  console.log(cart);
-
-  return <Card product={cart} />;
+  return <CartCard cart={cart} />;
 }

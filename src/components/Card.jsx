@@ -9,7 +9,7 @@ export default function Card({ product, setCart, cart }) {
       <p>Price: ${item.price}</p>
       <button
         onClick={() => {
-          if (!cart.find((ele) => (ele.id = item.id))) {
+          if (!cart.find((ele) => ele.id === item.id)) {
             const ele = product.find((ele) => ele.id === item.id);
             setCart([...cart, { ...ele, quantity: 1 }]);
           } else {
