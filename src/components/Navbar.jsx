@@ -13,7 +13,7 @@ export default function Shop({ itemCount }) {
         </li>
         <li>
           <NavLink to="/cart">
-            Cart{itemCount() > 0 ? ":" + itemCount() : ""}
+            Cart {itemCount() > 0 ? "(" + itemCount() + ")" : ""}
           </NavLink>
         </li>
       </ul>

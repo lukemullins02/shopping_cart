@@ -32,7 +32,7 @@ export default function CartCardTemp({ item, setCart, cart }) {
     <div className="card" key={item.id}>
       <img src={item.image} />
       <p className="card-title">{item.title}</p>
-      <p>Cost: ${item.price * value}</p>
+      <p>Cost: ${(item.price * value).toFixed(2)}</p>
       <div className="cart-quantity">
         <button onClick={handleSubtract} disabled={value === 1}>
           -

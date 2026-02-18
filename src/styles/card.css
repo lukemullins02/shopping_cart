@@ -93,3 +93,31 @@
   cursor: pointer;
   background-color: rgb(238, 234, 234);
 }
+
+.total {
+  text-align: center;
+}
+
+.cart-top {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.purchase {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 1.3rem;
+}
+
+.purchase:hover {
+  cursor: pointer;
+  background-color: rgb(238, 234, 234);
+}
+
+.cart-empty {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 3rem;
+}

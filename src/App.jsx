@@ -14,7 +14,6 @@ function App() {
 
   const itemCount = () => {
     if (cart.length > 0) {
-      console.log(cart);
       return cart.reduce((sum, cur) => sum + cur.quantity, 0);
     } else {
       return "";
