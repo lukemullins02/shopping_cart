@@ -20,12 +20,76 @@
   text-align: center;
 }
 
-.card:hover {
+.card-title {
+  min-height: 48px;
+}
+
+.increment {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 1.1rem;
+  min-width: 30px;
+}
+
+.add-cart {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 1.3rem;
+}
+
+.add-cart:hover {
   cursor: pointer;
+  background-color: rgb(238, 234, 234);
+}
+
+.increment:hover {
+  cursor: pointer;
+  background-color: rgb(238, 234, 234);
+}
+
+.card:hover {
   transform: scale(1.01);
 }
 
 .card > img {
   height: 200px;
   width: 200px;
+}
+
+.cart-quantity {
+  display: flex;
+}
+
+.cart-quantity > button {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 1.1rem;
+  min-width: 30px;
+}
+
+.cart-quantity > p {
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 1.3rem;
+}
+
+.remove {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 1.3rem;
+}
+
+.remove:hover {
+  cursor: pointer;
+  background-color: rgb(238, 234, 234);
 }

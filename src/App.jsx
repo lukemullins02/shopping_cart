@@ -12,6 +12,15 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [cart, setCart] = useState([]);
 
+  const itemCount = () => {
+    if (cart.length > 0) {
+      console.log(cart);
+      return cart.reduce((sum, cur) => sum + cur.quantity, 0);
+    } else {
+      return "";
+    }
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       fetch("https://fakestoreapi.com/products")
@@ -33,7 +42,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar itemCount={itemCount} />
       <div>
         <Routes>
           <Route path="/" element={<Home />} />

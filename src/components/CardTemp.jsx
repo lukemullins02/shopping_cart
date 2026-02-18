@@ -14,10 +14,14 @@ export default function CardTemp({ item, cart, setCart, product }) {
   return (
     <div className="card" key={item.id}>
       <img src={item.image} />
-      <p>{item.title}</p>
+      <p className="card-title">{item.title}</p>
       <p>Price: ${item.price}</p>
       <div>
-        <button onClick={handleSubtract} disabled={value === 0}>
+        <button
+          onClick={handleSubtract}
+          disabled={value === 0}
+          className="increment"
+        >
           -
         </button>
         <input
@@ -27,9 +31,12 @@ export default function CardTemp({ item, cart, setCart, product }) {
           value={value}
           onChange={(event) => setValue(event.target.value)}
         />
-        <button onClick={handleAdd}>+</button>
+        <button className="increment" onClick={handleAdd}>
+          +
+        </button>
       </div>
       <button
+        className="add-cart"
         onClick={() => {
           if (!cart.find((ele) => ele.id === item.id)) {
             const ele = product.find((ele) => ele.id === item.id);

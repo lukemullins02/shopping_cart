@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router";
 import "../styles/navbar.css";
 
-export default function Shop() {
+export default function Shop({ itemCount }) {
   return (
     <nav className="navbar">
       <ul>
@@ -12,7 +12,9 @@ export default function Shop() {
           <NavLink to="/shop">Shop</NavLink>
         </li>
         <li>
-          <NavLink to="/cart">Cart</NavLink>
+          <NavLink to="/cart">
+            Cart{itemCount() > 0 ? ":" + itemCount() : ""}
+          </NavLink>
         </li>
       </ul>
     </nav>

@@ -4,32 +4,44 @@ export default function CartCardTemp({ item, setCart, cart }) {
   const [value, setValue] = useState(item.quantity);
 
   function handleAdd() {
-    setValue(value + 1);
-  }
+    const newCart = cart.map((ele) => {
+      if (ele.id === item.id) {
+        const count = value + 1;
+        setValue(count);
+        return { ...ele, quantity: count };
+      }
+      return ele;
+    });
 
+    setCart(newCart);
+  }
   function handleSubtract() {
-    setValue(value - 1);
+    const newCart = cart.map((ele) => {
+      if (ele.id === item.id) {
+        const count = value - 1;
+        setValue(count);
+        return { ...ele, quantity: count };
+      }
+      return ele;
+    });
+
+    setCart(newCart);
   }
 
   return (
     <div className="card" key={item.id}>
       <img src={item.image} />
-      <p>{item.title}</p>
+      <p className="card-title">{item.title}</p>
       <p>Cost: ${item.price * value}</p>
-      <div>
+      <div className="cart-quantity">
         <button onClick={handleSubtract} disabled={value === 1}>
           -
         </button>
-        <input
-          min="1"
-          type="number"
-          name="quantity"
-          value={value}
-          onChange={(event) => setValue(event.target.value)}
-        />
+        <p>{value}</p>
         <button onClick={handleAdd}>+</button>
       </div>
       <button
+        className="remove"
         onClick={() => {
           const updatedCart = cart.filter((ele) => ele.id !== item.id);
           setCart(updatedCart);

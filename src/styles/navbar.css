@@ -10,6 +10,7 @@
   display: flex;
   list-style: none;
   gap: 1.8rem;
+  width: 100%;
 }
 
 .navbar > ul > li {
@@ -28,4 +29,9 @@
 .navbar > ul > li > a:hover {
   transform: scale(1.1);
   color: rgb(255, 255, 255);
+}
+
+.navbar > ul > li:nth-child(3) {
+  margin-left: auto;
+  margin-right: 5rem;
 }
