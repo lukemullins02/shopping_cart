@@ -8,7 +8,7 @@ export default function Home() {
       </div>
       <div>
         <p className="description">
-          Browser are store to find a variety of fake items! Navigate by using
+          Browser our store to find a variety of fake items! Navigate by using
           the links above.
         </p>
       </div>

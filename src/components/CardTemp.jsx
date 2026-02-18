@@ -29,7 +29,7 @@ export default function CardTemp({ item, cart, setCart, product }) {
           type="number"
           name="quantity"
           value={value}
-          onChange={(event) => setValue(event.target.value)}
+          onChange={(event) => setValue(Number(event.target.value))}
         />
         <button className="increment" onClick={handleAdd}>
           +
