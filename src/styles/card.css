@@ -14,7 +14,10 @@
   color: black;
   border-radius: 5px;
   box-shadow: 0 8px 24px #0000000a;
+  padding: 10px;
+  gap: 5px;
   transition: transform;
+  text-align: center;
 }
 
 .card:hover {
