@@ -1,0 +1,31 @@
+.navbar {
+  background-color: #fc6e51;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.navbar > ul {
+  display: flex;
+  list-style: none;
+  gap: 1.8rem;
+}
+
+.navbar > ul > li {
+  display: flex;
+  list-style: none;
+  gap: 1.3rem;
+}
+
+.navbar > ul > li > a {
+  color: rgb(225, 225, 225);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: transform;
+}
+
+.navbar > ul > li > a:hover {
+  transform: scale(1.1);
+  color: rgb(255, 255, 255);
+}
