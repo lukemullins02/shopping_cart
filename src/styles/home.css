@@ -1,0 +1,39 @@
+.home {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  height: 80vh;
+}
+
+.welcome {
+  position: relative;
+  display: flex;
+  text-align: center;
+  background-image: url("./public/shop.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(255, 255, 255);
+  align-items: start;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.welcome::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* adjust darkness here */
+  z-index: 0;
+}
+
+.welcome > h1 {
+  position: relative;
+  z-index: 1;
+  margin-top: 2rem;
+}
+
+.description {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  padding: 3rem;
+}

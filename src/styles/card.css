@@ -101,6 +101,7 @@
 .cart-top {
   display: flex;
   justify-content: center;
+  margin-top: 25px;
   gap: 3rem;
 }
 
