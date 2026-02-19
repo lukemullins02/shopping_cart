@@ -4,7 +4,7 @@ import Shop from "./components/Shop";
 import Cart from "./components/Cart";
 import { Routes, Route } from "react-router";
 import { useState, useEffect } from "react";
-import "./app.css";
+import "./App.css";
 
 function App() {
   const [product, setProduct] = useState([]);
